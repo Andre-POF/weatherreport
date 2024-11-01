@@ -1,24 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import Toparea from "./views/Toparea.jsx";
+import { InputProvider } from "./contexts/InputContext.jsx";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <InputProvider>
+        <main className="w-3/4 flex justify-start m-auto p-6 flex-col items-start">
+          <section>
+            <Toparea />
+          </section>
+          <section>Hero</section>
+          <section>Favourite Cities</section>
+        </main>
+      </InputProvider>
+    </>
   );
 }
 
