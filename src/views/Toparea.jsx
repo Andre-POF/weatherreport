@@ -7,7 +7,6 @@ const Toparea = () => {
   const [value, setValue] = useState(() => localStorage.getItem("citta") || "");
   useEffect(() => {
     window.localStorage.setItem("citta", value);
-    console.log(value);
   }, [value]);
   return (
     <div className="flex flex-row">
